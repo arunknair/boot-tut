@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+                    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+                    http://www.springframework.org/schema/util
+                    http://www.springframework.org/schema/util/spring-util-2.5.xsd">
+	<bean id="d" class="beans.Dummy">
+		<property name="fruits">
+			<util:list list-class="java.util.Vector">
+				<value>Apple</value>
+				<value>Jackfruit</value>
+			</util:list>
+		</property>
+		<property name="cricketers">
+			<util:set set-class="java.util.TreeSet">
+				<value>Sachin</value>
+				<value>Dravid</value>
+				<value>Dravid</value>
+			</util:set>
+		</property>
+		<property name="cCaps">
+			<util:map map-class="java.util.Hashtable">
+				<entry key="Ind" value="Delhi"></entry>
+				<entry key="SL" value="Columbo"></entry>
+				<entry key="BAN" value="Dhakha"></entry>
+			</util:map>
+		</property>
+		<property name="properties">
+			<util:properties location="classpath:resource/driver.properties"></util:properties>
+		</property>
+	</bean>
+</beans>

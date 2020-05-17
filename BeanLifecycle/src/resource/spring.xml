@@ -1,0 +1,9 @@
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+"https://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+<beans>
+	<bean class="org.springframework.context.annotation.CommonAnnotationBeanPostProcessor" />
+	<bean id="at" class="beans.AnnotationLifeCycle" />
+</beans>
+	<!-- <bean id="pt" class="beans.ProgrammaticLifeCycle"/> -->
+	<!-- <bean id="xt" class="beans.XMLInjectLifeCycle" init-method="myInit"  destroy-method="myDestroy"/> -->
